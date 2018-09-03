@@ -60,6 +60,7 @@ gulp.task('serve', ['sass'], function() {
   gulp.watch(['src/sass/**/*.scss'], ['sass']);
   gulp.watch(['src/*.html'], ['copyHTML']);
   gulp.watch(['public/*html']).on('change', browserSync.reload);
+  gulp.watch(['public/css/*.css']).on('change', browserSync.reload);
   gulp.watch(['src/scripts/*.js'], ['scripts']);
   gulp.watch(['public/scripts/*.js']).on('change', browserSync.reload);
 });
